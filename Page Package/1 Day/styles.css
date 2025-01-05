@@ -1,0 +1,141 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'K2D', serif;
+    background: url(/Photo/จ.จันทบุรี\ อ่าวคุ้งกระเบน.jpeg) no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+  }
+
+  .pacifico-regular {
+    font-family: "Pacifico", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .k2d-regular {
+    font-family: "K2D", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  header {
+    /* background-color: #222; */
+    padding: 10px 20px;
+  }
+  
+  header .menu {
+    display: flex;
+    list-style: none;
+    justify-content:end;
+    margin: 0;
+    padding: 15px;
+    border-bottom: 3px solid #313234;
+  }
+  
+  header .menu li {
+    margin: 0 15px;
+  }
+  
+  header .menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding-bottom: 5px;
+  }
+
+  .menu li a:hover::after,
+  .menu li a.active::after {
+    width: 100%;
+    background: red;
+  }
+  
+  /* header .menu li a:hover {
+    text-decoration: underline;
+  } */
+  
+  .grid-container {
+    max-width: 1200px;
+    margin: 5px 160px;
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* 2 คอลัมน์ */
+    gap: 20px;
+    align-items: center;
+  }
+  
+  /* รูปภาพทางซ้าย */
+  .image-container {
+    grid-column: 1 / 2; /* คอลัมน์ซ้าย */
+  }
+  
+  .image-container img {
+    width: 600px;
+    height: 540px;
+    border-radius: 43px;
+    object-fit: fill;
+    margin-top: 25px;
+    margin-right: 20px;
+  }
+  
+  /* กล่องทางขวา */
+  .right-container {
+    grid-column: 2 / 3; /* คอลัมน์ขวา */
+    display: flex;
+    flex-direction: column; /* จัดเรียงกล่องในแนวตั้ง */
+    gap: 10px; /* ระยะห่างเล็กน้อยระหว่างกล่อง */
+  }
+  
+  .container-info-box{
+    background-color: #272700;
+    color: white;
+    padding: 20px;
+    border-radius: 43px;
+    text-align: center;
+    margin-top: 25px;
+  }
+  .container-activity-box{
+    background-color: #18161D;
+    color: white;
+    padding: 20px;
+    border-radius: 43px;
+    text-align: left;
+    margin-top: 10px;
+  }
+  
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0%;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin: 5px 0;
+  }
+  
+  /* Media Query สำหรับหน้าจอเล็ก */
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr; /* เปลี่ยนเป็นคอลัมน์เดียว */
+    }
+  
+    .image-container img {
+      width: 100%;
+    }
+  }
+  
