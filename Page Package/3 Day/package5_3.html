@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เว็บไซต์ท่องเที่ยว</title>
+  <link rel="stylesheet" href="/Page Package/Package.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=K2D:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: url(/Photo/จ.ชลบุรี\ พัทยา\ -\ หาดจอมเทียน.jpeg) no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+    }
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3); /* ปรับค่าความโปร่งใส (0.3 - 0.5) */
+        z-index: -1;
+    }
+
+    /* จัดให้รูปภาพ, แพ็คเกจ, และกิจกรรมอยู่ในแนวเดียวกัน */
+    .grid-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+        max-width: 1200px;
+        margin: 20px auto; /* ลดระยะห่างด้านบน */
+        padding: 0px 20px; /* ลด Padding ด้านบน */
+    }
+
+    .image-container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 600px; /* ปรับให้ใกล้เคียงต้นฉบับ */
+    }
+    
+    .image-container img {
+        width: 100%;
+        max-width: 550px; /* ขยายรูปให้เหมือนต้นฉบับ */
+        border-radius: 20px;
+        object-fit: cover;
+        aspect-ratio: 16 / 10; /* รักษาสัดส่วนให้เหมือนต้นฉบับ */
+    }
+    
+    .right-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 600px; /* ให้ขนาดเท่ากับรูป */
+    }ห    
+
+    .container-info-box, .container-activity-box {
+        background-color: #272700;
+        color: white;
+        padding: 20px;
+        border-radius: 20px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .container-activity-box {
+        background-color: #18161D;
+        text-align: left;
+    }
+
+    .navigation-arrows {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .arrow-button {
+        background-color: #ffcc00;
+        color: black;
+        border: none;
+        padding: 10px 20px;
+        font-size: 20px;
+        cursor: pointer;
+        border-radius: 50%;
+        margin: 0 15px;
+    }
+
+    .arrow-button:hover {
+        background-color: #ffaa00;
+    }
+
+    .current-day {
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="navbar pacifico-regular">
+            <a href="#">HOME</a>
+            <a href="/Page Day/One.html">One Day</a>
+            <a href="/Page Day/Two.html">Two Day</a>
+            <a href="/Page Day/Three.html">Three Day</a>
+            <a href="/Page Day/Four.html">Four Day</a>
+            <a href="/Page Day/Five.html">Five Day</a>
+            <div class="logo">
+              <img src="/Photo/logo.png" alt="Logo">
+            </div>
+          </div>
+        </nav>
+      </header>
+
+
+  <main>
+    <!-- รูปภาพ + ข้อมูลแพ็คเกจ + กิจกรรมอยู่ในแถวเดียวกัน -->
+    <div class="grid-container">
+        <div class="image-container">
+            <img src="/Photo/จ.ชลบุรี พัทยา - หาดจอมเทียน.jpeg" alt="ภาพอ่าวคุ้งกระเบน">
+        </div>
+
+        <div class="right-container">
+            <div class="container-info-box">
+                <h3 class="k2d-regular" style="font-size: 30px;">แพ็คเกจที่ 5 : วัฒนธรรมและตลาดชุมชน (ฉะเชิงเทรา-ชลบุรี)</h3>
+                <ul>
+                    <li class="k2d-regular" style="font-size: 30px;">• เวลา : 07:00 - 21:00 น.</li>
+                    <li class="k2d-regular" style="font-size: 20px;">• หมายเหตุ: การเดินทางระหว่างจังหวัด อาจใช้เวลาแตกต่างกันไป ขึ้นอยู่กับเส้นทางและสภาพการจราจร ควรเผื่อเวลาเดินทางไว้ด้วย ควรตรวจสอบข้อมูลสถานที่ท่องเที่ยวและเวลาเปิด-ปิด ก่อนการเดินทาง เพื่อความสะดวกและรวดเร็ว และควรเตรียมตัวให้พร้อมสำหรับการเดินทาง เช่น เสื้อผ้า รองเท้า อุปกรณ์ป้องกันแสงแดด และอื่นๆ ตามความเหมาะสม</li>
+                </ul>
+            </div>
+
+            <div class="container-activity-box">
+                <h3 class="k2d-regular" style="font-size: 30px;">กิจกรรม :</h3>
+                <div class="activity-container">
+                    <div class="day-content" id="day1">
+                        <h3 class="k2d-regular">วันที่ 1: ฉะเชิงเทรา (เน้นวัฒนธรรม)</h3>
+                        <ul>
+                            <li>• 07:00 - 08:00 น. : เดินทางจากจุดนัดพบไปยังจังหวัดฉะเชิงเทรา</li>
+                            <li>• 08:00 - 10:00 น. : เยี่ยมชมวัดโสธรวรารามวรวิหาร สักการะหลวงพ่อโสธร</li>
+                            <li>• 10:00 - 12:00 น. : ชมตลาดบ้านใหม่ ช้อปปิ้งของพื้นเมือง</li>
+                            <li>• 12:00 - 13:00 น. : รับประทานอาหารกลางวัน ณ ร้านอาหารริมแม่น้ำบางปะกง</li>
+                            <li>• 13:00 - 15:00 น. : เยี่ยมชมพิพิธภัณฑ์เมืองฉะเชิงเทรา</li>
+                            <li>• 15:00 - 17:00 น. : เดินทางไปยังที่พักในชลบุรี เช็คอิน</li>
+                            <li>• 18:00 - 19:00 น. : รับประทานอาหารเย็น</li>
+                            <li>• 19:00 - 21:00 น. : พักผ่อนตามอัธยาศัย</li>
+                        </ul>
+                    </div>
+                
+                    <div class="day-content" id="day2" style="display: none;">
+                        <h3 class="k2d-regular">วันที่ 2: จันทบุรี (เน้นวัฒนธรรม)</h3>
+                        <ul>
+                            <li>• 07:00 - 08:00 น. : รับประทานอาหารเช้าที่โรงแรม</li>
+                            <li>• 08:00 - 10:00 น. : เยี่ยมชมสวนนงนุช ชมสวนสวยและการแสดงวัฒนธรรม</li>
+                            <li>• 10:00 - 12:00 น. : เดินทางไปเขาชีจรรย์ ชมพระพุทธรูปแกะสลักบนหน้าผาหิน</li>
+                            <li>• 12:00 - 13:00 น. : รับประทานอาหารกลางวัน ณ ร้านอาหารในพัทยา</li>
+                            <li>• 13:00 - 16:00 น. : พักผ่อนที่ชายหาดบางแสน หรือเลือกกิจกรรมตามความสนใจ</li>
+                            <li>• 16:00 - 18:00 น. : เดินทางกลับที่พัก</li>
+                            <li>• 18:00 - 19:00 น. : รับประทานอาหารเย็น</li>
+                            <li>• 19:00 - 21:00 น. : พักผ่อน</li>
+                        </ul>
+                    </div>
+                
+                    <div class="day-content" id="day3" style="display: none;">
+                        <h3 class="k2d-regular">วันที่ 3: เดินทางกลับ</h3>
+                        <ul>
+                            <li>• 07:00 - 08:00 น. : รับประทานอาหารเช้าที่โรงแรม</li>
+                            <li>• 08:00 - 09:00 น. : เดินทางกลับ</li>
+                        </ul>
+                    </div>
+                
+                    <div class="navigation-arrows">
+                        <button class="arrow-button" id="prev-day">❮</button>
+                        <span class="current-day" id="current-day-label">วันที่ 1</span>
+                        <button class="arrow-button" id="next-day">❯</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+  </main>
+
+  <script>
+    const days = ["day1", "day2", "day3"];
+    let currentIndex = 0;
+
+    function updateDay() {
+        // ซ่อนทุกวัน
+        days.forEach(day => {
+            document.getElementById(day).style.display = "none";
+        });
+
+        // แสดงเฉพาะวันที่เลือก
+        document.getElementById(days[currentIndex]).style.display = "block";
+
+        // อัปเดตตัวหนังสือ
+        document.getElementById("current-day-label").innerText = "วันที่ " + (currentIndex + 1);
+    }
+
+    document.getElementById("next-day").addEventListener("click", function () {
+        if (currentIndex < days.length - 1) {
+            currentIndex++;
+            updateDay();
+        }
+    });
+
+    document.getElementById("prev-day").addEventListener("click", function () {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateDay();
+        }
+    });
+
+    // โหลดครั้งแรกให้แสดงวันแรกก่อน
+    updateDay();
+</script>
+</body>
+</html>
