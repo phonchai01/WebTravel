@@ -100,6 +100,11 @@
             overflow: hidden;
             box-shadow: 5 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            opacity: 0.3;
+            /* Default opacity for all cards */
+            transform: scale(0.8) translateZ(-50px);
+            /* Default transform for all cards */
+
         }
 
         .carousel .card img {
@@ -122,12 +127,19 @@
 
         .caption {
             position: absolute;
-            text-align: center;
+            top: 50%;
+            /* จัดให้อยู่กึ่งกลางหน้าจอในแนวตั้ง */
+            left: 50%;
+            /* จัดให้อยู่กึ่งกลางหน้าจอในแนวนอน */
+            transform: translate(-50%, -50%);
+            /* ทำให้ข้อความอยู่ตรงกลางสมบูรณ์แบบ */
             color: white;
             font-size: 36px;
             font-weight: bold;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-            bottom: 20px;
+            text-align: center;
+            /* จัดข้อความให้อยู่ตรงกลาง */
+            z-index: 10;
         }
 
         .arrow {
@@ -243,12 +255,12 @@
         function updateCarousel() {
             cards.forEach((card, index) => {
                 card.classList.remove('middle', 'left', 'right');
-                if (index === currentIndex + 1) {
-                    card.classList.add('left');
-                } else if (index === currentIndex) {
-                    card.classList.add('middle');
-                } else if (index === currentIndex) {
-                    card.classList.add('right');
+                if (index === currentIndex) {
+                    card.classList.add('middle'); // Card ตรงกลาง
+                } else if (index === (currentIndex === 0 ? cards.length - 1 : currentIndex - 1)) {
+                    card.classList.add('left'); // Card ด้านซ้าย
+                } else if (index === (currentIndex === cards.length - 1 ? 0 : currentIndex + 1)) {
+                    card.classList.add('right'); // Card ด้านขวา
                 }
             });
             document.getElementById('caption').innerText = captions[currentIndex];
