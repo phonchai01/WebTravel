@@ -1,48 +1,44 @@
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background: url(/Photo/จ.ระยอง\ เกาะเสม็ด.jpeg) no-repeat center center fixed;
-    background-size: cover;
-    color: white;
-    position: relative;
-}
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: -1;
+
+.navbar-container {
+    display: flex;
+    align-items: center; /* จัดให้อยู่ตรงกลางแนวแกน Y */
+    justify-content: space-between; /* กระจายโลโก้กับแท็บให้ห่างกัน */
+    padding: 10px 20px;
+    
 }
 
 .navbar {
     display: flex;
-    justify-content: flex-start;
-    padding: 10px 20px;
-    border-bottom: 1px solid white;
+    justify-content:end;
+    margin: 0;
+    padding: 4px;
+    border-bottom: 3px solid rgb(106, 106, 106);
+    gap: 20px; 
+    white-space: nowrap;
 }
 .navbar a {
-    margin-right: 20px;
+    margin: 10px;
     text-decoration: none;
-    color: white;
-    font-size: 16px;
+    color: rgb(184, 184, 184);
+    font-size: 18px;
+    
+    transition: color 0.3s ease; /* เพิ่มเอฟเฟกต์การเปลี่ยนสี */
 }
 .logo {
-    position: absolute;
+
     top: 10px;
-    right: 10px;
+    left:10px;
 }
 .logo img {
-    width: 100px;
-    height: auto;
+    width: 60px;
+   
+    
 }
 .title-row {
     display: flex;
     
     justify-content: space-between;
-    
+    align-items: center;
     margin-left: 100px;
     font-size: 50px;
     font-weight: bold;
@@ -55,21 +51,22 @@ body::before {
     margin-top: 200px;
     position: relative;
     overflow: hidden;
-    margin-bottom: 50px; /* เพิ่มช่องว่างระหว่าง carousel และปุ่ม */
+    margin-bottom: 30px; /* เพิ่มช่องว่างระหว่าง carousel และปุ่ม */
 }
 .carousel-container {
     display: flex;
-    gap: 40px; /* ระยะห่างระหว่างภาพ */
-    overflow-x: scroll;
+    gap: 50px; /* ระยะห่างระหว่างภาพ */
+    overflow-x: auto;
     scroll-behavior: smooth;
-    width: 80%; /* ปรับขนาดแคโรเซล */
-    margin-left: 8%; /* เบี่ยงไปทางขวา */
+    width: 80%; /* ปรับขนาดแคโรเซล */  
+    margin-left: 5%; /* เบี่ยงไปทางขวา */
 }
 .carousel-container::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for cleaner UI */
+    height: 8px; /* Hide scrollbar for cleaner UI */
 }
 .carousel-item {
     flex: 0 0 auto;
+    position: relative;
     width: 200px;
     border-radius: 15px;
     overflow: hidden;
@@ -81,36 +78,72 @@ body::before {
     height: auto;
 }
 .carousel-item p {
-    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: left;
+    width: 100%;
     color: white;
-    font-size: 12px;
-    padding: 5px 0;
+    padding: 50px 10px;
     margin: 0;
+    font-size: 33px;
+}
+
+.carousel-item t {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: left;
+    width: 100%;
+    color: white;
+    padding: 20px 10px;
+    margin: 0;
+    font-size: 25px;
+    
 }
 .carousel-buttons {
     display: flex;
     justify-content: center;
-    margin-top: 20px; /* เพิ่มระยะห่างด้านบน */
     gap: 40px; /* ระยะห่างระหว่างปุ่ม */
-    
-    
     
 }
 
 .carousel-button {
-    background-color: rgba(0, 0, 0, 0.6);
-    border: none;
-    color: white;
-    font-size: 30px;
+    background-color: transparent; /* ทำให้พื้นหลังโปร่งใส */
+    border: 3px solid white; 
+    color: white; 
+    min-width: 60px;
+    min-height: 60px;
+    font-size: 35px; /* ขยายขนาดตัวอักษร */
     cursor: pointer;
-    padding: 10px;
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
+    padding: 10px; /* เพิ่มขนาดปุ่ม */
+    border-radius: 50%; /* ทำให้ปุ่มกลม */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
     
 }
 
 
 .carousel-button:hover {
     background-color: rgba(255, 255, 255, 0.6);
-    color: black;
+    color: white;
+    transform: scale(1.1);
 }
+
+.pacifico-regular {
+    font-family: "Pacifico", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+ 
+.k2d-regular {
+    font-family: "K2D", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.navbar a.active {
+    color: rgb(255, 255, 255); 
+}
+
+
+  

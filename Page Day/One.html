@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Day.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="pr econnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Pacifico&display=swap" rel="stylesheet">
+    <title>One Day</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('/Photo/จ.ระยอง\ เกาะเสม็ด.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            position: relative;
+            
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+    </style>
+</head>  
+    <body>
+    <div class="container">
+
+        <div class="navbar">
+            
+            <a href="Home.html"class="pacifico-regular" >HOME</a>
+            <a href="One.html"class="pacifico-regular" >One Day</a>
+            <a href="Two.html"class="pacifico-regular">Two Day</a>
+            <a href="Three.html"class="pacifico-regular">Three Day</a>
+            <a href="Four.html"class="pacifico-regular">Four Day</a>
+            <a href="Five.html"class="pacifico-regular">Five Day</a>
+            <div class="logo">
+                <img src="/Photo/logo.png" alt="Logo">
+            </div>
+        </div>
+        
+
+        <div class="carousel">
+            <div class="title-row">
+                <p class="pacifico-regular">One Day</p>
+            </div>
+            <div class="carousel-container">
+                
+                <div class="carousel-item">
+                    <a href="/Page Package/1 Day/package1_1.html">
+                        <img src="/Photo/จ.ระยอง เกาะเสม็ด.jpeg" alt="Packet One">
+                    </a>
+                    <p class="pacifico-regular" >Packet One </p><br> 
+                    <t class="k2d-regular">จ.ระยอง</t>
+                </div>
+
+                <div class="carousel-item">
+                    <a href="P_Two.html">  
+                        <img src="/Photo/จ.จันทบุรี อ่าวคุ้งกระเบน.jpeg" alt="Packet Two">
+                    </a>
+                    <p class="pacifico-regular" >Packet Two </p><br> 
+                    <t class="k2d-regular">จ.จันทบุรี</t>
+                </div>
+
+                <div class="carousel-item">
+                    <a href="P_Three.html">  
+                        <img src="/Photo/จ.ชลบุรี พัทยา - หาดจอมเทียน.jpeg" alt="Packet Three">
+                    </a>
+                    <p class="pacifico-regular" >Packet Three </p><br> 
+                    <t class="k2d-regular">จ.ชลบุรี</t>
+                </div>
+
+                <div class="carousel-item">
+                    <a href="P_Four.html">  
+                        <img src="/Photo/จ.สระแก้ว ตลาดโรงเกลือ.jpeg" alt="Packet Four">
+                    </a>
+                    <p class="pacifico-regular" >Packet Four </p><br> 
+                    <t class="k2d-regular">จ.สระแก้ว</t>
+                </div>
+
+                <div class="carousel-item">
+                    <a href="P_Five.html">  
+                        <img src="/Photo/จ.ฉะเชิงเทรา วัดโสธรวรารามวรวิหาร.jpeg" alt="Packet Five">
+                    </a>
+                    <p class="pacifico-regular" >Packet Five </p><br> 
+                    <t class="k2d-regular">จ.ฉะเชิงเทรา</t>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-buttons">
+            <button class="carousel-button" id="prev">&#8249;</button>
+            <button class="carousel-button" id="next">&#8250;</button>
+        </div>
+        
+        
+
+    <script>
+        const carouselContainer = document.querySelector('.carousel-container');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+
+        prevButton.addEventListener('click', () => {
+            carouselContainer.scrollBy({ left: -200, behavior: 'smooth' });
+        });
+
+        nextButton.addEventListener('click', () => {
+            carouselContainer.scrollBy({ left: 200, behavior: 'smooth' });
+        });
+
+
+        // ดึง URL ปัจจุบัน
+        const currentPage = window.location.pathname;
+
+    // ดึงลิงก์ทั้งหมดใน navbar
+        const navLinks = document.querySelectorAll('.navbar a');
+
+        navLinks.forEach(link => {
+            if (link.href.includes(currentPage)) {
+                link.classList.add('active'); // เพิ่มคลาส active
+            }
+        });
+    </script>
+</body>
+</html>
