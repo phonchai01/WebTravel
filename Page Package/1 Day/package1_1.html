@@ -4,29 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>เว็บไซต์ท่องเที่ยว</title>
-  <link rel="stylesheet" href="/Page Package/1 Day/styles.css">
+  <link rel="stylesheet" href="/Page Package/Package.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
+  <style>
+    body{
+      background: url(/Photo/bg\ อ่าวคุ้งกระเบน.png) no-repeat center center fixed;
+      background-size: cover;
+    }
+  </style>
   <header>
     <nav>
-      <ul class="menu pacifico-regular">
-        <li><a href="#">HOME</a></li>
-        <li><a href="/Page Day/OneDay.html" class="active">One Day</a></li>
-        <li><a href="#">Two Day</a></li>
-        <li><a href="#">Three Day</a></li>
-        <li><a href="#">Four Day</a></li>
-        <li><a href="#">Five Day</a></li>
-      </ul>
+      <div class="navbar pacifico-regular">
+        <a href="#">HOME</a>
+        <a href="#">One Day</a>
+        <a href="#">Two Day</a>
+        <a href="#">Three Day</a>
+        <a href="#">Four Day</a>
+        <a href="#">Five Day</a>
+        <div class="logo">
+          <img src="/Photo/logo.png" alt="Logo">
+        </div>
+      </div>
     </nav>
   </header>
   <main>
     <div class="grid-container">
       <!-- รูปภาพทางซ้าย -->
       <div class="image-container">
-        <img src="/Photo/จ.จันทบุรี อ่าวคุ้งกระเบน.jpeg" alt="ภาพอ่าวคุ้งกระเบน">
+        <img src="/Photo/อ่าวคุ้งกระเบน.png" alt="ภาพอ่าวคุ้งกระเบน">
       </div>
       <!-- กล่อง Container ทางขวา -->
       <div class="right-container">
@@ -55,14 +64,13 @@
   </main>
 
   <script>
-    // JavaScript เพื่อเปลี่ยน active เมนู
-    document.querySelectorAll('.menu li a').forEach(link => {
-      link.addEventListener('click', function () {
-        // ลบคลาส active จากเมนูที่มีอยู่
-        document.querySelector('.menu li a.active')?.classList.remove('active');
-        // เพิ่มคลาส active ให้กับลิงก์ที่คลิก
-        this.classList.add('active');
-      });
+    const currentPage = window.location.pathname;
+    const navLinks = document.querySelectorAll('.navbar a');
+
+    navLinks.forEach(link => {
+        if (link.href.includes(currentPage)) {
+            link.classList.add('active');
+        }
     });
   </script>
 </body>
