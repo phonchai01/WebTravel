@@ -83,6 +83,8 @@
             align-items: center;
             height: 100vh;
             perspective: 1000px;
+            flex-wrap: wrap;
+            /* ทำให้ Card ยืดหยุ่นในกรณีหน้าจอเล็ก */
         }
 
         .carousel {
@@ -147,11 +149,20 @@
             right: 20px;
         }
 
+        /* ปรับขนาดเมื่อหน้าจอเล็กกว่า 1024px */
+        @media (max-width: 1024px) {
+            .carousel .card {
+                width: 250px;
+                /* ลดขนาด Card */
+                margin: 0 15px;
+            }
+        }
+
         /* ปรับขนาดเมื่อหน้าจอเล็กกว่า 768px */
         @media (max-width: 768px) {
             .carousel .card {
                 width: 200px;
-                margin: 0 15px;
+                margin: 0 10px;
             }
         }
 
@@ -159,7 +170,7 @@
         @media (max-width: 480px) {
             .carousel .card {
                 width: 150px;
-                margin: 0 10px;
+                margin: 0 5px;
             }
         }
     </style>
