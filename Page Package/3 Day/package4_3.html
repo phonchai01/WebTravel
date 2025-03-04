@@ -7,185 +7,97 @@
   <link rel="stylesheet" href="/Page Package/Package.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=K2D:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
-  <style>
-    body {
-      background: url(/Photo/จ.จันทบุรี\ อ่าวคุ้งกระเบน.jpeg) no-repeat center center fixed;
-      background-size: cover;
-      margin: 0;
-      padding: 0;
-    }
-    body::before {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.3); /* ปรับค่าความโปร่งใส (0.3 - 0.5) */
-        z-index: -1;
-    }
-
-    /* จัดให้รูปภาพ, แพ็คเกจ, และกิจกรรมอยู่ในแนวเดียวกัน */
-    .grid-container {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 20px;
-        max-width: 1200px;
-        margin: 20px auto; /* ลดระยะห่างด้านบน */
-        padding: 0px 20px; /* ลด Padding ด้านบน */
-    }
-
-    .image-container {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-width: 600px; /* ปรับให้ใกล้เคียงต้นฉบับ */
-    }
-    
-    .image-container img {
-        width: 100%;
-        max-width: 550px; /* ขยายรูปให้เหมือนต้นฉบับ */
-        border-radius: 20px;
-        object-fit: cover;
-        aspect-ratio: 16 / 10; /* รักษาสัดส่วนให้เหมือนต้นฉบับ */
-    }
-    
-    .right-container {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        max-width: 600px; /* ให้ขนาดเท่ากับรูป */
-    }ห    
-
-    .container-info-box, .container-activity-box {
-        background-color: #272700;
-        color: white;
-        padding: 20px;
-        border-radius: 20px;
-        text-align: center;
-        width: 100%;
-    }
-
-    .container-activity-box {
-        background-color: #18161D;
-        text-align: left;
-    }
-
-    .navigation-arrows {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 10px;
-    }
-
-    .arrow-button {
-        background-color: #ffcc00;
-        color: black;
-        border: none;
-        padding: 10px 20px;
-        font-size: 20px;
-        cursor: pointer;
-        border-radius: 50%;
-        margin: 0 15px;
-    }
-
-    .arrow-button:hover {
-        background-color: #ffaa00;
-    }
-
-    .current-day {
-        font-size: 20px;
-        font-weight: bold;
-        color: white;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-          <div class="navbar pacifico-regular">
-            <a href="#">HOME</a>
-            <a href="/Page Day/One.html">One Day</a>
-            <a href="/Page Day/Two.html">Two Day</a>
-            <a href="/Page Day/Three.html">Three Day</a>
-            <a href="/Page Day/Four.html">Four Day</a>
-            <a href="/Page Day/Five.html">Five Day</a>
-            <div class="logo">
-              <img src="/Photo/logo.png" alt="Logo">
+  <style>
+    body{
+      background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+      url(/Photo/จ.ฉะเชิงเทรา\ ตลาดบ้านใหม่\ 100\ ปี.jpeg) no-repeat center center fixed;
+      background-size: cover;
+    }
+  </style>
+  <header>
+    <nav>
+      <div class="navbar">
+        <a href="/HomePage/index.html" class="pacifico-regular">HOME</a>
+        <div class="dropdown">
+            <button class="dropbtn pacifico-regular">DAY</button>
+            <div class="dropdown-content">
+                <a href="/Page Day/One.html" class="pacifico-regular">One Day</a>
+                <a href="/Page Day/Two.html" class="pacifico-regular">Two Day</a>
+                <a href="/Page Day/Three.html" class="pacifico-regular">Three Day</a>
+                <a href="/Page Day/Four.html" class="pacifico-regular">Four Day</a>
+                <a href="/Page Day/Five.html" class="pacifico-regular">Five Day</a>
             </div>
-          </div>
-        </nav>
-      </header>
-
-
-  <main>
-    <!-- รูปภาพ + ข้อมูลแพ็คเกจ + กิจกรรมอยู่ในแถวเดียวกัน -->
-    <div class="grid-container">
-        <div class="image-container">
-            <img src="/Photo/จ.จันทบุรี อ่าวคุ้งกระเบน.jpeg" alt="ภาพอ่าวคุ้งกระเบน">
         </div>
-
-        <div class="right-container">
-            <div class="container-info-box">
-                <h3 class="k2d-regular" style="font-size: 30px;">แพ็คเกจที่ 4 : ธรรมชาติและแหล่งเรียนรู้ (ระยอง-จันทบุรี)</h3>
+        <div class="logo">
+            <img src="/Photo/logo.png" alt="Logo">
+        </div>
+    </div>
+    </nav>
+  </header>
+  <main>
+    <div class="grid-container">
+      <!-- รูปภาพทางซ้าย -->
+      <div class="image-container">
+        <img src="/Photo/จ.สระแก้ว อุทยานแห่งชาติปางสีดา.jpeg" alt="ภาพอ่าวคุ้งกระเบน">
+      </div>
+      <!-- กล่อง Container ทางขวา -->
+      <div class="right-container">
+        <div class="container-info-box">
+          <h3 class="k2d-regular" style="font-size: 25px;">แพ็คเกจที่ 4 : ธรรมชาติและแหล่งเรียนรู้</h3>
+          <ul>
+            <li class="k2d-regular" style="font-size: 23px;">•  สถานที่ : จังหวัดระยอง จังหวัดจันทบุรี</li>
+            <li class="k2d-regular" style="font-size: 14px; color: crimson;">*หมายเหตุ : เวลาที่ระบุเป็นเวลาโดยประมาณ และอาจมีการปรับเปลี่ยนได้ตามความเหมาะสม ราคาแพ็คเกจขึ้นอยู่กับฤดูกาล โรงแรมที่เลือก และจำนวนผู้เดินทาง ควรติดต่อบริษัททัวร์หรือโรงแรมโดยตรงเพื่อสอบถามราคาและรายละเอียดเพิ่มเติม*</li>
+          </ul>
+        </div>
+        <div class="container-activity-box">
+          <div class="activity-container">
+            <div class="day-content k2d-regular" id="day1">
+                <h3>วันที่ 1 : ระยอง(เน้นธรรมชาติ)</h3>
                 <ul>
-                    <li class="k2d-regular" style="font-size: 30px;">• เวลา : 07:00 - 21:00 น.</li>
-                    <li class="k2d-regular" style="font-size: 20px;">• หมายเหตุ: การเดินทางระหว่างจังหวัด อาจใช้เวลาแตกต่างกันไป ขึ้นอยู่กับเส้นทางและสภาพการจราจร ควรเผื่อเวลาเดินทางไว้ด้วย ควรตรวจสอบข้อมูลสถานที่ท่องเที่ยวและเวลาเปิด-ปิด ก่อนการเดินทาง เพื่อความสะดวกและรวดเร็ว และควรเตรียมตัวให้พร้อมสำหรับการเดินทาง เช่น เสื้อผ้า รองเท้า อุปกรณ์ป้องกันแสงแดด และอื่นๆ ตามความเหมาะสม</li>
+                    <li style="text-indent: 30px;">• 07:00 - 08:00: เดินทางจากจุดนัดพบไปยังจังหวัดระยอง</li>
+                    <li style="text-indent: 30px;">• 08:00 - 10:00: เยี่ยมชมอุทยานแห่งชาติเขาแหลมหญ้า-หมู่เกาะเสม็ด เดินศึกษาธรรมชาติ ถ่ายรูปทิวทัศน์</li>
+                    <li style="text-indent: 30px;">• 10:00 - 12:00: เที่ยวชมสวนผลไม้ในระยอง ชิมผลไม้ตามฤดูกาล</li>
+                    <li style="text-indent: 30px;">• 12:00 - 13:00: รับประทานอาหารกลางวัน ณ ร้านอาหารในระยอง</li>
+                    <li style="text-indent: 30px;">• 13:00 - 15:00: เยี่ยมชมไร่องุ่นซิลเวอร์เลค ถ่ายรูปและลิ้มรสไวน์</li>
+                    <li style="text-indent: 30px;">• 15:00 - 17:00: เดินทางไปยังที่พักในระยอง เช็คอิน</li>
+                    <li style="text-indent: 30px;">• 18:00 - 19:00: รับประทานอาหารเย็น ณ ร้านอาหารริมทะเล</li>
+                    <li style="text-indent: 30px;">• 19:00 - 21:00: พักผ่อนตามอัธยาศัย</li>
                 </ul>
             </div>
 
-            <div class="container-activity-box">
-                <h3 class="k2d-regular" style="font-size: 30px;">กิจกรรม :</h3>
-                <div class="activity-container">
-                    <div class="day-content" id="day1">
-                        <h3 class="k2d-regular">วันที่ 1: ระยอง (เน้นธรรมชาติ)</h3>
-                        <ul>
-                            <li>• 07:00 - 08:00 น. : เดินทางจากจุดนัดพบไปยังจังหวัดระยอง</li>
-                            <li>• 08:00 - 10:00 น. : เยี่ยมชมอุทยานแห่งชาติเขาแหลมหญ้า-หมู่เกาะเสม็ด เดินศึกษาธรรมชาติ ถ่ายรูปทิวทัศน์</li>
-                            <li>• 10:00 - 12:00 น. : เที่ยวชมสวนผลไม้ในระยอง ชิมผลไม้ตามฤดูกาล</li>
-                            <li>• 12:00 - 13:00 น. : รับประทานอาหารกลางวัน ณ ร้านอาหารในระยอง</li>
-                            <li>• 13:00 - 15:00 น. : เยี่ยมชมไร่องุ่นซิลเวอร์เลค ถ่ายรูปและลิ้มรสไวน์</li>
-                            <li>• 15:00 - 17:00 น. : เดินทางไปยังที่พักในระยอง เช็คอิน</li>
-                            <li>• 18:00 - 19:00 น. : รับประทานอาหารเย็น ณ ร้านอาหารริมทะเล</li>
-                            <li>• 19:00 - 21:00 น. : พักผ่อนตามอัธยาศัย</li>
-                        </ul>
-                    </div>
-                
-                    <div class="day-content" id="day2" style="display: none;">
-                        <h3 class="k2d-regular">วันที่ 2: จันทบุรี (เน้นวัฒนธรรม)</h3>
-                        <ul>
-                            <li>• 07:00 - 08:00 น. : รับประทานอาหารเช้าที่โรงแรม</li>
-                            <li>• 08:00 - 10:00 น. : เดินทางไปยังเมืองจันทบุรี เยี่ยมชมโบสถ์วัดแม่พระปฏิสนธินิรมล</li>
-                            <li>• 10:00 - 12:00 น. : เดินเล่นและช้อปปิ้งสินค้าพื้นเมืองที่ตลาดพลู</li>
-                            <li>• 12:00 - 13:00 น. : รับประทานอาหารกลางวัน ณ ร้านอาหารในจันทบุรี</li>
-                            <li>• 13:00 - 15:00 น. : เยี่ยมชมอุทยานแห่งชาติน้ำตกพลิ้ว สัมผัสธรรมชาติ</li>
-                            <li>• 15:00 - 17:00 น. : เดินทางกลับที่พักในจันทบุรี</li>
-                            <li>• 18:00 - 19:00 น. : รับประทานอาหารเย็นที่ร้านอาหารทะเล</li>
-                            <li>• 19:00 - 21:00 น. : พักผ่อน</li>
-                        </ul>
-                    </div>
-                
-                    <div class="day-content" id="day3" style="display: none;">
-                        <h3 class="k2d-regular">วันที่ 3: เดินทางกลับ</h3>
-                        <ul>
-                            <li>• 07:00 - 08:00 น. : รับประทานอาหารเช้าที่โรงแรม</li>
-                            <li>• 08:00 - 09:00 น. : เดินทางกลับ</li>
-                        </ul>
-                    </div>
-                
-                    <div class="navigation-arrows">
-                        <button class="arrow-button" id="prev-day">❮</button>
-                        <span class="current-day" id="current-day-label">วันที่ 1</span>
-                        <button class="arrow-button" id="next-day">❯</button>
-                    </div>
-                </div>
-                
+            <div class="day-content k2d-regular" id="day2">
+                <h3>วันที่ 2 : จันทบุรี(เน้นวัฒนธรรม)</h3>
+                <ul>
+                    <li style="text-indent: 30px;">• 07:00 - 08:00: รับประทานอาหารเช้าที่โรงแรม</li>
+                    <li style="text-indent: 30px;">• 08:00 - 10:00: เดินทางไปยังเมืองจันทบุรี เยี่ยมชมโบสถ์วัดแม่พระปฏิสนธินิรมล</li>
+                    <li style="text-indent: 30px;">• 10:00 - 12:00: เดินเล่นและช้อปปิ้งสินค้าพื้นเมืองที่ตลาดพลู</li>
+                    <li style="text-indent: 30px;">• 12:00 - 13:00: รับประทานอาหารกลางวัน ณ ร้านอาหารในจันทบุรี</li>
+                    <li style="text-indent: 30px;">• 13:00 - 15:00: เยี่ยมชมอุทยานแห่งชาติน้ำตกพลิ้ว สัมผัสธรรมชาติ</li>
+                    <li style="text-indent: 30px;">• 15:00 - 17:00: เดินทางกลับที่พักในจันทบุรี</li>
+                    <li style="text-indent: 30px;">• 18:00 - 19:00: รับประทานอาหารเย็นที่ร้านอาหารทะเล</li>
+                    <li style="text-indent: 30px;">• 19:00 - 21:00: พักผ่อน</li>
+                </ul>
             </div>
+
+            <div class="day-content k2d-regular" id="day3">
+                <h3>วันที่ 3 : เดินทางกลับ</h3>
+                <ul>
+                    <li style="text-indent: 30px;">• 07:00 - 08:00: รับประทานอาหารเช้าที่โรงแรม</li>
+                    <li style="text-indent: 30px;">• 08:00 - 09:00: เดินทางกลับ</li>
+                </ul>
+            </div>
+
+            <div class="navigation-arrows">
+                <button class="arrow-button" id="prev-day">❮</button>
+                <span class="current-day" id="current-day-label">วันที่ 1</span>
+                <button class="arrow-button" id="next-day">❯</button>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
   </main>
 
@@ -222,6 +134,7 @@
 
     // โหลดครั้งแรกให้แสดงวันแรกก่อน
     updateDay();
-</script>
+  </script>
+  
 </body>
 </html>

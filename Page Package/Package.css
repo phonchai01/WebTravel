@@ -101,6 +101,7 @@ body::before {
   text-align: center;
   margin-top: 25px;
 }
+
 .container-activity-box{
   background-color: #18161D;
   color: white;
@@ -108,6 +109,34 @@ body::before {
   border-radius: 43px;
   text-align: left;
   margin-top: 10px;
+}
+
+.navigation-arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.arrow-button {
+  background-color: #FEE7AA;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 0 15px;
+}
+
+.arrow-button:hover {
+  background-color: #ffaa00;
+}
+
+.current-day {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
 }
 
 h3 {
@@ -132,6 +161,53 @@ ul li {
   .image-container img {
     width: 100%;
   }
+}
+
+/* ส่วนของ Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px; /* เพิ่มช่องว่างทางขวา */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8); /* พื้นหลังโปร่งใสออกดำ ๆ */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+  z-index: 1;
+  font-family: 'K2D', serif; /* ใช้ฟอนต์ K2D กับลิงก์ใน Dropdown */
+}
+
+.dropdown-content a {
+  color: white; /* สีตัวอักษรเป็นสีขาว */
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(50, 50, 50, 0.7); /* พื้นหลังออกดำเมื่อชี้ */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: transparent !important; /* เอาพื้นหลังตอนชี้ออก */
+}
+
+.dropbtn {
+  background-color: transparent !important; /* เอาพื้นหลังออก */
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Pacifico', serif !important; /* ใช้ฟอนต์ Pacifico แน่นอน */
 }
 
 /* Rectangle 3 */
